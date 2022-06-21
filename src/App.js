@@ -1,26 +1,19 @@
 import React, { Component } from 'react';
 import './App.css';
-
-// class App extends Component {
-//   render() {
-//     return (
-//       React.createElement(
-//         'h1',
-//         { className: 'main-title',id: 'title' },
-//         'Welcome to y website!'
-//       )
-//     );
-//   }
-// }
+import MenuMakanan from "./components/MenuMakanan/MenuMakanan";
+import MenuMinuman from "./components/MenuMinuman/MenuMinuman";
 
 class App extends Component {
   render() {
-    const namaLengkap = "Ardiyanto Putra";
     return (
-      <div>
-        <h1 className="main-template">Welcome to {namaLengkap}!!</h1>
-        <p>ini adalah paragraf </p>
+      <div className="App">
+        <h1>Cafe And Resto Nayyara</h1>
+        <h2>Menu Makanan</h2>
+        <MenuMakanan/>
+        <h2>Menu Minuman</h2>
+        <MenuMinuman/>
       </div>
+      
     );
   }
 }
