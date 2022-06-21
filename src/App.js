@@ -9,9 +9,12 @@ class App extends Component {
       <div className="App">
         <h1>Cafe And Resto Nayyara</h1>
         <h2>Menu Makanan</h2>
-        <MenuMakanan/>
+        <MenuMakanan namaMenu={"Ayam Bakar"} hargaMenu={25000}/>
+        <MenuMakanan namaMenu={"Nasi Goreng"} hargaMenu={15000}/>
         <h2>Menu Minuman</h2>
-        <MenuMinuman/>
+        <MenuMinuman namaMenu={"Jus Melon"} hargaMenu={8000}/>
+        <MenuMinuman namaMenu={"Jus Alpukat"} hargaMenu={8000}/>
+        <MenuMinuman namaMenu={"Jus Jambu"} hargaMenu={7000}/>
       </div>
       
     );
