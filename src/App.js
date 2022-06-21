@@ -22,8 +22,8 @@ class App extends Component {
     return (
       <div className="App">
         <h1>Cafe And Resto { this.state.namaResto }</h1>
-        <button onClick={this.handleGantiNamaResto} style={{ borderRadius: "8px", boxShadow: "5px 7px #888888", backgroundColor: "aqua"}}>Ganti Nama Resto</button>
-        <button onClick={this.handleBackNamaResto} style={{ borderRadius: "8px", boxShadow: "5px 7px #888888", backgroundColor: "aqua"}}>Kembali Nama Resto</button>
+        <button onClick={this.handleGantiNamaResto} className="btn btn-primary" style={{ boxShadow: "5px 7px #888888",margin:"5px"}}>Ganti Nama Resto</button>
+        <button onClick={this.handleBackNamaResto} className="btn btn-info" style={{ boxShadow: "5px 7px #888888",margin:"5px"}}>Kembali Nama Resto</button>
         <h2>Menu Makanan</h2>
         <MenuMakanan namaMenu={"Ayam Bakar"} hargaMenu={25000}/>
         <MenuMakanan namaMenu={"Nasi Goreng"} hargaMenu={15000}/>
