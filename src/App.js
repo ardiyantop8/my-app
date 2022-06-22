@@ -11,6 +11,14 @@ class App extends Component {
       menuMakanan: [
         { nama: 'Ayam bakar', harga: 25000, stock: 10 },
         { nama: 'Nasi Goreng', harga: 22000, stock: 0 },
+        
+      ],
+      menuMinuman : [
+        { id:1, nama: 'Jus Alpukat', harga: 8000, stock: 10 },
+        { id:2, nama: 'Jus Mangga', harga: 7000, stock: 0 },
+        { id:3, nama: 'Jus Jeruk', harga: 7000, stock: 5 },
+        { id:4, nama: 'Jus Naga', harga: 8000, stock: 11 },
+        { id:5, nama: 'Jus Jambu', harga: 8000, stock: 20 },
 
       ]
     }
@@ -41,9 +49,13 @@ class App extends Component {
           stock = { this.state.menuMakanan[1].stock }
         />
         <h2>Menu Minuman</h2>
-        <MenuMinuman namaMenu={"Jus Melon"} hargaMenu={8000}/>
-        <MenuMinuman namaMenu={"Jus Alpukat"} hargaMenu={8000}/>
-        <MenuMinuman namaMenu={"Jus Jambu"} hargaMenu={7000}/>
+        <div className="row">
+          {
+            this.state.menuMinuman.map((menu, index) =>
+              <MenuMinuman key={menu.id} namaMenu={menu.nama} hargaMenu={menu.harga} stok={menu.stock}/>
+            )
+          }
+        </div>
       </div>
       
     );
